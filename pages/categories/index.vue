@@ -1,16 +1,24 @@
 <template>
   <div id="categories-page" class="page-wrapper categories-page">
-    <site-hero title="Categories" image="https://picsum.photos/1800/1801" />
-    <main-section theme="one-column">
-      <categories-grid />
-    </main-section>
+    <model-obj
+      src="https://cors-anywhere.herokuapp.com/https://firebasestorage.googleapis.com/v0/b/firstbot-a1ca0.appspot.com/o/eyeball.obj?alt=media&token=d2c1a893-c80c-43d1-85b4-b9c5e8a788f7"
+      @on-load="onLoad"
+    ></model-obj>
+    <div id="container"></div>
   </div>
 </template>
 <script>
+import { ModelObj } from 'vue-3d-model'
 export default {
+  components: { ModelObj },
   head() {
     return {
       title: `Categories | ${this.$siteConfig.siteName}`
+    }
+  },
+  methods: {
+    onLoad() {
+      this.loading = false
     }
   }
 }

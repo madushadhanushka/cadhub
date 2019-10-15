@@ -44,6 +44,7 @@
     "showdown": "^1.9.0",
     "url-parse": "^1.4.7",
     "v-runtime-template": "^1.10.0",
+    "vue-3d-model": "^1.1.1",
     "vue-disqus": "^3.0.5"
   },
   "devDependencies": {
